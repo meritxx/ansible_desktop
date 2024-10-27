@@ -20,12 +20,14 @@
 
  
   - name:  set wallpaper
+    become_user:  mustapha
     dconf:
       key:  "/org/gnome/desktop/background/picture-uri"
       value:  "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
 
 
   - name:  set wall position
+    become _user:  mustapha
     dconf:
       key:  "/org/gnome/desktop/background/picture-options"
       value:  "'zoom'"
